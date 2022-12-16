@@ -45,10 +45,10 @@ legend(1999, -4, c(Tag1, Tag2),
 a.prior <- c(1,0.2)
 l.prior <- c(1,1)
 b.prior <- c(0,0.6)
-ini.point <- list(a=6, b=0.9, l=3) # starting point
+ini.point <- list(a=6, b=0.9, l=0.1) # starting point
 assign(paste("v",C1,sep="."),0.25) # proposal variances for country 1
 assign(paste("v",C2,sep="."),0.20) # proposal variances for country 2
-MM <- 1.1e5 # run length
+MM <- 1000 # run length
 
 #_________________________________________________________
 # The stationary model
@@ -84,7 +84,7 @@ graph(C1, C2, stat=FALSE, g.prior=FALSE)
 a.prior.g <- c(2, 0.1)
 l.prior.g <- c(2, 0.6)
 b.prior.g <- c(0, 0.5)
-ini.point.g <- list(a=6, b=0.9, l=3)
+ini.point.g <- list(a=2, b=0, l=5)
 assign(paste("v",C1,"g",sep="."),0.25)
 assign(paste("v",C2,"g",sep="."),0.20)
 MM.g <- 1.1e5
